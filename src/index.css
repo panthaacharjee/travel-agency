@@ -1,13 +1,322 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+::-webkit-scrollbar {
+  width: 6px;
+  /* padding: 0px 10px; */
+  z-index: 111111111;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #bdbcbc;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(122, 118, 118);
+  border-radius: 5px;
+}
+
+/* Handle on Hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(1, 6, 39);
+}
+
+/* Header Section */
+.header-section {
+  padding: 40px 80px;
+  background: linear-gradient(rgba(2, 2, 2, 0.589), rgba(31, 30, 30, 0.671)),
+    url("./asstes/Europe.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  color: #fff;
+  letter-spacing: 0.08em;
+  font-size: 22px;
+}
+.logo > h2 > span {
+  color: tomato;
+}
+.nav-menu {
+  /* width: 40%; */
+}
+.nav-menu > li {
+  display: inline-block;
+  margin-left: 18px;
+}
+.nav-menu > li > a {
+  text-decoration: none;
+  color: aliceblue;
+}
+.nav-menu > li > a:hover {
+  color: tomato;
+  border-bottom: 1px solid tomato;
+  /* text-transform: uppercase; */
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.nav-menu > li > button {
+  padding: 8px 20px;
+  background: none;
+  border: 2px solid tomato;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.heading {
+  padding: 80px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heading-box > h2 {
+  color: rgb(243, 17, 55);
+  text-shadow: 2px 2px 5px #000;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.heading-text {
+  font-size: 50px;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.heading-box > p {
+  color: rgb(197, 196, 196);
+  font-size: 15px;
+  text-shadow: 1px 1px 15px rgb(44, 44, 44);
+  margin-top: 20px;
+}
+
+.heading-button {
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.heading-button > button {
+  background: rgb(255, 199, 17);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-right: 30px;
+}
+.heading-button > button:hover {
+  /* text-shadow: 1px 1px 15px #000; */
+  background: rgb(243, 202, 66);
+}
+
+.heading-button > div {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.heading-button > div > span {
+  font-size: 26px;
+  color: rgb(190, 10, 10);
+  margin-top: 7px;
+}
+
+.heading-button > div > p {
+  color: #fff;
+  margin-left: 5px;
+}
+
+.svg-box {
+  padding: 10px 20px;
+  background: rgba(95, 95, 95, 0.658);
+  border-radius: 10%;
+}
+.svg-box > img {
+  height: 300px;
+  display: block;
+  margin: 0px auto;
+}
+
+/* Service Section */
+.service-section {
+  padding: 100px 80px;
+  position: relative;
+}
+.for-background {
+  position: absolute;
+  background: rgb(219, 219, 219);
+  height: 200px;
+  width: 30%;
+  top: 0;
+  right: 0;
+  border-bottom-left-radius: 2000%;
+  border-bottom-right-radius: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.service-section > p {
+  text-align: center;
+}
+.service-section > h2 {
+  text-align: center;
+  letter-spacing: 0.08em;
+  margin-top: 10px;
+}
+.service-section-container {
+  padding: 10px 0px;
+  margin-top: 50px;
+}
+.service-section-box {
+  text-align: center;
+  width: 90%;
+  padding: 30px 0px;
+  border-radius: 10px;
+  border: 1px solid rgb(216, 216, 216);
+}
+.service-section-box:hover {
+  box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.39);
+}
+.service-section-box > img {
+  height: 55px;
+}
+
+.service-section-box > h4 {
+  margin-top: 20px;
+  margin-bottom: 6px;
+  letter-spacing: 0.05em;
+  font-size: 18px;
+}
+
+/* Destination Section */
+.destination-section {
+  padding: 100px 80px;
+  background: rgb(237, 251, 255);
+}
+.destination-section > h2 {
+  text-align: center;
+  margin-top: 10px;
+  letter-spacing: 0.08em;
+  font-size: 30px;
+}
+.destination-section > p {
+  text-align: center;
+}
+.destination-section-container {
+  margin-top: 80px;
+}
+
+.destination-section-box {
+  width: 70%;
+  box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.39);
+  padding-bottom: 20px;
+  margin: 0px auto;
+  border-radius: 10px;
+}
+
+.destination-section-box > img {
+  width: 100%;
+  height: 250px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.destination-name {
+  font-weight: 700;
+}
+
+.destination-section-box > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+.destination-section-box > p {
+  margin-left: 20px;
+}
+
+/* Trip Section */
+.trip-section {
+  padding: 100px 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.trip-section-box > h2 {
+  font-size: 46px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.trip-section-content {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.trip-section-content > div {
+  margin-right: 10px;
+  font-size: 25px;
+  /* width: 50%; */
+  background: rgb(255, 136, 0);
+  z-index: 111;
+  color: #fff;
+  padding: 5px;
+  /* margin-top: 20px; */
+  border-radius: 8px;
+}
+.trip-section-content > p {
+  color: tomato;
+  font-weight: 700;
+}
+.trip-section-content > p > label {
+  color: #000;
+  font-weight: 400;
+  padding-top: 30px;
+}
+.trip-choose {
+  /* margin: 0px auto; */
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.171);
+  border-radius: 10px;
+  padding: 20px;
+  /* background: tomato; */
+}
+.trip-choose > img {
+  width: 350px;
+  height: 200px;
+  border-radius: 20px;
+}
+
+.trip-choose > h4 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.trip-choose > div {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+}
+
+.trip-choose > div > span {
+  margin-right: 10px;
 }
