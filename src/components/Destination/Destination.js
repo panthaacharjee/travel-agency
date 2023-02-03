@@ -15,7 +15,7 @@ const Destination = () => {
       <Grid container className="destination-section-container">
         <Grid item md={4}>
           <div className="destination-section-box">
-            <img src={Greece} alt="Greece Photo" />
+            <img src={Europe} alt="Greece Photo" />
             <div>
               <p className="destination-name">Athens, Greece</p>
               <p>$ 5.4k</p>

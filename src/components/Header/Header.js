@@ -1,6 +1,7 @@
 import React from "react";
 import { BsFillPlayCircleFill } from "react-icons/bs";
 import womenSvg from "../../asstes/header-svg.svg";
+import { GoThreeBars } from "react-icons/go";
 
 const Header = () => {
   return (
@@ -27,6 +28,9 @@ const Header = () => {
           <li>
             <button>Sign Up</button>
           </li>
+        </div>
+        <div className="mobile-menu">
+          <GoThreeBars />
         </div>
       </div>
       <div className="heading">
